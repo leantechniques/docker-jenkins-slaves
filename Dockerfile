@@ -1,4 +1,6 @@
 FROM jenkins
 
-CMD cd $JENKINS_HOME/plugins && _ 
-curl -O http://updates.jenkins-ci.org/latest/docker-plugin.hpi
+
+RUN mkdir $JENKINS_HOME/plugins \ 
+    && cd $JENKINS_HOME/plugins \
+    && curl -O http://updates.jenkins-ci.org/latest/docker-plugin.hpi

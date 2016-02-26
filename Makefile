@@ -7,6 +7,8 @@ start:
 		--name jenkins-master \
 		-p 8080:8080 -p 50000:50000 \
 		-v $(shell pwd)/.volume:/var/jenkins_home \
+		-v /var/run/docker.sock:/var/run/docker.sock \
+		-v $(shell which docker):/usr/bin/docker \
 		timgifford/jenkins-docker
 
 setup:
@@ -19,6 +21,9 @@ build:
 	docker build -t timgifford/jenkins-docker .
 
 clean:
+	docker rm jenkins-master
+
+reset:
 	rm -rf $(shell pwd)/.volume
 clean-docker:
 	docker ps -a | grep 'weeks ago' | awk '{print $1}' | xargs docker rm

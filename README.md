@@ -6,7 +6,7 @@ I'm running Docker on MacOS. This means the I have `docker-machine` running. I w
 Credit goes to this writeup for helping me work past some painful hurdles. It can be found [here:](
 http://container-solutions.com/running-docker-in-jenkins-in-docker/)
 
-## Run Jenkins as a container 
+## Run Jenkins in a Docker container 
 
  1. Add any plugins you need to the `plugins.txt' file.
  1. Build the container `make build`

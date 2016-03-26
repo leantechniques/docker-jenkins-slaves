@@ -9,7 +9,7 @@ start:
 		-v $(shell pwd)/.volume:/var/jenkins_home \
 		-v /var/run/docker.sock:/var/run/docker.sock \
 		-v $(shell which docker):/usr/bin/docker \
-		timgifford/jenkins-docker
+		leantech/jenkins-docker
 
 setup:
 	#curl -O https://releases.hashicorp.com/vault/0.4.1/vault_0.4.1_linux_amd64.zip
@@ -18,7 +18,7 @@ setup:
 	#rm vault_0.4.1_linux_amd64.zip	
 
 build: 
-	docker build -t timgifford/jenkins-docker .
+	docker build -t leantech/jenkins-docker .
 
 clean:
 	docker rm jenkins-master

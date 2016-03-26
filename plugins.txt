@@ -1,8 +1,11 @@
+authentication-tokens:1.1
+cloudbees-folder:5.5
 credentials:1.25
 docker-commons:1.3.1
 docker-custom-build-environment:1.6.5
 git-client:1.19.6
 git:2.4.3
+icon-shim:2.0.3
 junit:1.11
 matrix-auth:1.3.2
 matrix-project:1.6

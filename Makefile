@@ -12,7 +12,6 @@ start:
 		-p 8080:8080 -p 50000:50000 \
 		-v $(shell pwd)/.volume:/var/jenkins_home \
 		-v /var/run/docker.sock:/var/run/docker.sock \
-		-v $(shell which docker):/usr/bin/docker \
 		leantechniques/jenkins-docker
 
 build: 
